@@ -8,7 +8,9 @@ function App() {
 
       <div style={{
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        backgroundColor: 'black',
+        color:'white'
       }}>
           <Profile  />
       </div>
