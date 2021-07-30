@@ -51,6 +51,7 @@ export default class Profile extends React.Component {
                 const recentmatchs = res.data;
                 this.setState({ recentmatchs });
             })
+        
     }
 
     render() {
@@ -270,12 +271,12 @@ export default class Profile extends React.Component {
                                                             <div style={{
                                                                 marginLeft: '5px'
                                                             }}>
-                                                                <span><a
+                                                                <span><Link
                                                                 style = {{
                                                                     textDecoration: "none",
                                                                     color: 'white'
                                                                 }}
-                                                                 href={"https://api.opendota.com/api/matches/" + match.match_id}>{Hero(match.hero_id).nome}</a></span>
+                                                                 to={{ pathname:"/match/"+match.match_id, state:{match_id:match.match_id}}} >{Hero(match.hero_id).nome}</Link></span>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -283,16 +284,16 @@ export default class Profile extends React.Component {
                                                         <div>
                                                             <div>
                                                                 <span>
-                                                                    <a
+                                                                    <Link
                                                                     style = {{
                                                                         textDecoration: "none",
                                                                         color: 'white'
                                                                     }}
-                                                                     href={"https://api.opendota.com/api/matches/" + match.match_id}>
+                                                                    to={{ pathname:"/match/"+match.match_id, state:{match_id:match.match_id}}}>
                                                                         {
                                                                             checkWin(match.player_slot, match.radiant_win)
                                                                         }
-                                                                    </a>
+                                                                    </Link>
                                                                 </span>
                                                             </div>
                                                             <div>

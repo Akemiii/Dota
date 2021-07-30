@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Main from "../Player/Main";
 import Profile from "../Player/Profile";
+import Match from "../Match/Match";
 
 
 export default function Rotas() {
@@ -15,7 +16,8 @@ export default function Rotas() {
       <div>
         <Switch>
           <Route exact path="/" component={Main} />
-          <Route path="/Profile" component={Profile} />
+          <Route path="/Profile/:account_id" component={Profile} />
+          <Route path="/match/:match_id" component={Match} />
         </Switch>
       </div>
     </Router>
