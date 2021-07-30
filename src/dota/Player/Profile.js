@@ -3,6 +3,14 @@ import axios from 'axios';
 import Hero from '../Hero/Hero'
 import LobbyType from '../Match/LobbyType';
 import GameMode from '../Match/GameMode';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch
+} from "react-router-dom";
 
 
 
@@ -224,7 +232,7 @@ export default class Profile extends React.Component {
                                             <div style={{
                                                 marginLeft: '5px'
                                             }}>
-                                                    <span><a href={"https://api.opendota.com/api/matches/" + match.match_id}>{Hero(match.hero_id).nome}</a></span>
+                                                    <span><a style={{color:'white'}} href={"https://api.opendota.com/api/matches/" + match.match_id}>{Hero(match.hero_id).nome}</a></span>
                                             </div>
                                         </div>
                                     </td>
@@ -232,7 +240,7 @@ export default class Profile extends React.Component {
                                         <div>
                                             <div>
                                                 <span>
-                                                    <a href={"https://api.opendota.com/api/matches/" + match.match_id}>
+                                                    <a style={{color:'white'}} href={"https://api.opendota.com/api/matches/" + match.match_id}>
                                                     {
                                                        checkWin(match.player_slot, match.radiant_win) 
                                                     } 
