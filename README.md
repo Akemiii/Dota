@@ -1,23 +1,25 @@
-##Dota buff clone
+# Dota buff clone
 
-###TODO List
-[] Match
-[] Matchs
-[] RecentMatchs
-[] Axios
+hr
 
-
-
-
-
-[]Design
+### TODO List
+-[] Match
+-[] Matchs
+-[] RecentMatchs
+-[] Axios
 
 
 
-###Done List
-[x] Profile
-[x] Routes
-[x] RankTier
-[x] LobbyType
-[x] GameMOde
-[x] Hero
+
+
+-[]Design
+
+
+
+### Done List
+-[x] Profile
+-[x] Routes
+-[x] RankTier
+-[x] LobbyType
+-[x] GameMOde
+-[x] Hero
