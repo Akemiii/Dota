@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Profile from './dota/Player/Profile'
+import Rotas from './dota/Rotas/Rotas'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         backgroundColor: 'black',
         color:'white'
       }}>
-          <Profile  />
+          <Rotas  />
       </div>
 
     </div>

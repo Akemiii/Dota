@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {location} from 'react';
 import axios from 'axios';
 import Hero from '../Hero/Hero'
 import LobbyType from '../Match/LobbyType';
@@ -11,7 +11,8 @@ import {
   Route,
   Link,
   useParams,
-  useRouteMatch
+  useRouteMatch,
+  useLocation
 } from "react-router-dom";
 
 
@@ -20,22 +21,23 @@ export default class Profile extends React.Component {
         dados: [],
         profile: [],
         winLose: [],
-        recentmatchs: []
+        recentmatchs: [],
     }
 
     componentDidMount() {
-        axios.get(`https://api.opendota.com/api/players/58857954`)
+
+        const account_id = this.props.location.state.account_id;
+
+        axios.get(`https://api.opendota.com/api/players/`+account_id)
             .then(res => {
                 const dados = res.data;
                 const profile = res.data.profile;
-                console.log(dados);
-                console.log(profile);
                 this.setState({ dados, profile });
             })
 
 
 
-        axios.get(` https://api.opendota.com/api/players/58857954/wl`)
+        axios.get("https://api.opendota.com/api/players/" + account_id + "/wl")
             .then(res => {
                 const winLose = res.data;
                 this.setState({ winLose });
@@ -44,15 +46,16 @@ export default class Profile extends React.Component {
 
 
 
-        axios.get(`https://api.opendota.com/api/players/58857954/recentMatches`)
+        axios.get("https://api.opendota.com/api/players/"+ account_id + "/recentMatches")
             .then(res => {
                 const recentmatchs = res.data;
-                console.log(recentmatchs);
                 this.setState({ recentmatchs });
             })
     }
 
     render() {
+
+        
 
         function checkWin(player_slot, radiant_win) {
             if (player_slot <= 127) {
