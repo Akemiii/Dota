@@ -41,14 +41,14 @@ export default class Match extends React.Component {
                 }}>
                     <div style={{marginRight: 5}}>
                         <span style={{marginRight: 5 }}>
-                            Dire
+                            Radiant
                         </span>
                         <span>
                             {this.state.matchInfo.radiant_score}
                         </span>
                     </div>
                     <div>
-                        <span style={{marginRight: 5 }}>Radiant</span>
+                        <span style={{marginRight: 5 }}>Dire</span>
                         <span> {this.state.matchInfo.dire_score}</span>
                     </div>
                 </div>
