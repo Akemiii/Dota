@@ -15,13 +15,13 @@
 
 * [x] Hero 
 
+* [x]  RecentMatchs
+
 ### TODO List
 --------
 * [ ] Match
 
 * [ ] Matchs
-
-* [ ]  RecentMatchs
 
 * [ ]  Axios
 
