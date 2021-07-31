@@ -36,15 +36,15 @@ export default class RecentMatchs extends React.Component {
         function checkWin(player_slot, radiant_win) {
             if (player_slot <= 127) {
                 if (radiant_win) {
-                    return "Won Match";
+                    return (<div style={{color:"green"}}>Won Match</div>);
                 } else {
-                    return "Lost Match";
+                    return (<div style={{color:"red"}}>Lost Match</div>);
                 }
             } else {
                 if (radiant_win) {
-                    return "Lost Match";
+                    return (<div style={{color:"red"}}>Lost Match</div>);
                 } else {
-                    return "Won Match";
+                    return (<div style={{color:"green"}}>Won Match</div>);
                 }
             }
         }
@@ -131,7 +131,6 @@ export default class RecentMatchs extends React.Component {
                                                             <Link
                                                                 style={{
                                                                     textDecoration: "none",
-                                                                    color: 'white'
                                                                 }}
                                                                 to={{ pathname: "/match/" + match.match_id, state: { match_id: match.match_id } }}>
                                                                 {
